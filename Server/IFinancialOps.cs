@@ -11,10 +11,20 @@ namespace FinancialOps
     public interface IFinancialOps {
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]
-        void TransferAtoB(int acctA, int acctB, double amount);
+        Boolean NewOrder(int client, string email, int op, int type, int quantity);
+
+        [OperationContract]
+        int GetStatus(int id);
 
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]
-        void TransferBtoA(int acctB, int acctA, double amount);
+        Boolean ChangeOrder(int id, double cotation);
+
+        [OperationContract]
+        List<int> GetWaitingRequests();
+
+        [OperationContract]
+        List<int> GetRequestsByClient(int client);
+
     }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7effe26a-e45d-42a8-ba4c-578a8b6ab06b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9002/FinancialInstitution/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="281e050e-4a1f-4581-a8b0-32202cface55" SourceId="1" SourceUrl="http://localhost:9002/FinancialInstitution/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e89dacd3-e161-4d36-91b7-d245dc4ec13a" SourceId="1" SourceUrl="http://localhost:9002/FinancialInstitution/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="337f4d7c-9423-47dd-affc-bb7dc1c76e0d" SourceId="1" SourceUrl="http://localhost:9002/FinancialInstitution/?xsd=xsd0" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="30edad05-a497-410c-b670-c7b38c28cd81" SourceId="1" SourceUrl="http://localhost:9002/FinancialInstitution/?xsd=xsd1" />
+    <MetadataFile FileName="FinancialOps.wsdl" MetadataType="Wsdl" ID="874af2bc-9c78-4a7a-8304-1e6ccc4294bc" SourceId="1" SourceUrl="http://localhost:9002/FinancialInstitution/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
