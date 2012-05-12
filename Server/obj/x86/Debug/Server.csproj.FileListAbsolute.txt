@@ -1,0 +1,6 @@
+c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe.config
+c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe
+c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.pdb
+c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe
+c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.pdb
