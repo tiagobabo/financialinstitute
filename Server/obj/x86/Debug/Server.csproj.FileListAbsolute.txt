@@ -4,3 +4,7 @@ c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\
 c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.pdb
 c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe
 c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.pdb
+C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe.manifest
+C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.application
+C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe.manifest
+C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.application

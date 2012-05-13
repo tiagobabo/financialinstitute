@@ -5,14 +5,16 @@ using System.Text;
 using System.ServiceModel;
 using System.Data.SqlClient;
 using System.Configuration;
+using Server.FinancialInstitute;
 
 namespace FinancialOps
 {
     class FinancialOps : IFinancialOps
     {
         public static string connString = ConfigurationManager.ConnectionStrings["FinancialServer"].ToString();
+        public FinancialInstituteOpsClient financialinstitute = new FinancialInstituteOpsClient();
 
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = false)]
+        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
         public Boolean NewOrder(int client, string email, int op, int type, int quantity) 
         {
             SqlConnection conn = new SqlConnection(connString);
@@ -26,9 +28,12 @@ namespace FinancialOps
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
                 if (rows == 1)
-                    OperationContext.Current.SetTransactionComplete();
+                {
+                    financialinstitute.ReportToInstitute(client, email, op, type, quantity);
+                }
+                else throw new Exception();
             }
-            catch(Exception e)
+            catch
             {
                 return false;
             }

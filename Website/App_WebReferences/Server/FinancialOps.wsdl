@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FinancialOps" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="TcpFinancialBinding_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="TcpFinancialBinding_NewOrder_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="TcpFinancialBinding_ChangeOrder_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9002/FinancialInstitution/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9002/FinancialInstitution/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9002/FinancialInstitution/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFinancialOps_NewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrder" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_NewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_GetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_GetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_ChangeOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeOrder" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_ChangeOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_GetWaitingRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaitingRequests" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_GetWaitingRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaitingRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_GetRequestsByClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestsByClient" />
+  </wsdl:message>
+  <wsdl:message name="IFinancialOps_GetRequestsByClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestsByClientResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IFinancialOps">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/NewOrder" message="tns:IFinancialOps_NewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/NewOrderResponse" message="tns:IFinancialOps_NewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/GetStatus" message="tns:IFinancialOps_GetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/GetStatusResponse" message="tns:IFinancialOps_GetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ChangeOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/ChangeOrder" message="tns:IFinancialOps_ChangeOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/ChangeOrderResponse" message="tns:IFinancialOps_ChangeOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetWaitingRequests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/GetWaitingRequests" message="tns:IFinancialOps_GetWaitingRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/GetWaitingRequestsResponse" message="tns:IFinancialOps_GetWaitingRequests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetRequestsByClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/GetRequestsByClient" message="tns:IFinancialOps_GetRequestsByClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/GetRequestsByClientResponse" message="tns:IFinancialOps_GetRequestsByClient_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TcpFinancialBinding" type="tns:IFinancialOps">
+    <wsp:PolicyReference URI="#TcpFinancialBinding_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="NewOrder">
+      <wsp:PolicyReference URI="#TcpFinancialBinding_NewOrder_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IFinancialOps/NewOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <soap12:operation soapAction="http://tempuri.org/IFinancialOps/GetStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeOrder">
+      <wsp:PolicyReference URI="#TcpFinancialBinding_ChangeOrder_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IFinancialOps/ChangeOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitingRequests">
+      <soap12:operation soapAction="http://tempuri.org/IFinancialOps/GetWaitingRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestsByClient">
+      <soap12:operation soapAction="http://tempuri.org/IFinancialOps/GetRequestsByClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FinancialOps">
+    <wsdl:port name="TcpFinancialBinding" binding="tns:TcpFinancialBinding">
+      <soap12:address location="net.tcp://localhost:8702/FinancialInstitution/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8702/FinancialInstitution/</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

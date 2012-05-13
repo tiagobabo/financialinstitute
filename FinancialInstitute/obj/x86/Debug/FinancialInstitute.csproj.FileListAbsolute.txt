@@ -7,3 +7,4 @@ C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Financi
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\FinancialInstitute.exe
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\FinancialInstitute.pdb
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\FinancialInstitute.Form1.resources
