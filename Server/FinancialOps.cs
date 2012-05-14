@@ -118,19 +118,29 @@ namespace FinancialOps
             return requests;
         }
 
-        public List<int> GetRequestsByClient(int client)
+        public List<List<String>> GetRequestsByClient(int client)
         {
             SqlConnection conn = new SqlConnection(connString);
-            List<int> requests = new List<int>();
+            List<List<String>> requests = new List<List<String>>();
             SqlDataReader rdr;
             try
             {
                 conn.Open();
-                string sqlcmd = "select id from requests where cliente="+client;
+                string sqlcmd = "select * from requests where cliente="+client;
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
-                    requests.Add(Convert.ToInt16(rdr["id"]));
+                {
+                    List<String> list = new List<String>();
+                    list.Add(rdr["data"].ToString());
+                    list.Add(rdr["email"].ToString());
+                    list.Add(rdr["op"].ToString());
+                    list.Add(rdr["tipo"].ToString());
+                    list.Add(rdr["quantidade"].ToString());
+                    list.Add(rdr["cotacao"].ToString());
+                    list.Add(rdr["valor"].ToString());
+                    requests.Add(list);
+                }
             }
             catch
             {

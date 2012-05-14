@@ -24,7 +24,7 @@ namespace FinancialOps
         List<int> GetWaitingRequests();
 
         [OperationContract]
-        List<int> GetRequestsByClient(int client);
+        List<List<String>> GetRequestsByClient(int client);
 
     }
 }

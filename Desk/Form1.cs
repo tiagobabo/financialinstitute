@@ -12,16 +12,28 @@ namespace Desk
 {
     public partial class Form1 : Form
     {
+        FinancialOpsClient server;
         public Form1()
         {
             InitializeComponent();
+            server = new FinancialOpsClient();
+        }
 
-            FinancialOpsClient server = new FinancialOpsClient();
-            Boolean op = server.NewOrder(1, "asd@asd.com", 0, 1, 10);
-            if (op)
-                MessageBox.Show("YEAH");
-            else MessageBox.Show("Ohh");
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NovaOrdem no = new NovaOrdem();
+            no.ShowDialog();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
             server.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ConsultarEstado no = new ConsultarEstado();
+            no.ShowDialog();
         }
     }
 }
