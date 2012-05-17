@@ -7,8 +7,11 @@
     <title></title>
 </head>
 <body>
+<h1>Cliente Online</h1>
+
     <form id="form1" runat="server">
-    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Call Service" />
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Criar nova ordem" />
+    <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Consultar ordens" />
     </form>
 </body>
 </html>
