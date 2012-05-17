@@ -8,13 +8,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="TcpFinancialBinding_NewOrder_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="TcpFinancialBinding_ChangeOrder_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -85,7 +78,6 @@
     <wsp:PolicyReference URI="#TcpFinancialBinding_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
     <wsdl:operation name="NewOrder">
-      <wsp:PolicyReference URI="#TcpFinancialBinding_NewOrder_policy" />
       <soap12:operation soapAction="http://tempuri.org/IFinancialOps/NewOrder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />

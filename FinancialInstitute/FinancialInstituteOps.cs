@@ -12,7 +12,6 @@ namespace FinancialInstituteOps
     {
         public static string connString = ConfigurationManager.ConnectionStrings["FinancialInstitute"].ToString();
 
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
         public void ReportToInstitute(int client, string email, int op, int type, int quantity)
         {
             SqlConnection conn = new SqlConnection(connString);

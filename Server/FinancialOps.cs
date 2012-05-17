@@ -14,7 +14,7 @@ namespace FinancialOps
         public static string connString = ConfigurationManager.ConnectionStrings["FinancialServer"].ToString();
         public FinancialInstituteOpsClient financialinstitute = new FinancialInstituteOpsClient();
 
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
+   
         public Boolean NewOrder(int client, string email, int op, int type, int quantity) 
         {
             SqlConnection conn = new SqlConnection(connString);
@@ -67,7 +67,6 @@ namespace FinancialOps
             return status;
         }
 
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = false)]
         public Boolean ChangeOrder(int id, double cotation)
         {
             SqlConnection conn = new SqlConnection(connString);

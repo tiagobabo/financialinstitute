@@ -21,18 +21,33 @@ namespace Desk
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtID.Text);
-            String[][] requests = server.GetRequestsByClient(id);
-            int i = 0;
-            if (requests.Length == 0)
-                return;
-            do
+            try
             {
-                ListViewItem lv = new ListViewItem(requests[i]);
-                listView1.Items.Add(lv);
-                i++;
+                button1.Enabled = false;
+                txtID.Enabled = false;
+                int id = Convert.ToInt32(txtID.Text);
+                String[][] requests = server.GetRequestsByClient(id);
+                int i = 0;
+                listView1.Items.Clear();
+                if (requests.Length == 0)
+                    return;
+                do
+                {
+                    ListViewItem lv = new ListViewItem(requests[i]);
+                    listView1.Items.Add(lv);
+                    i++;
 
-            } while (i != requests.Length);
+                } while (i != requests.Length);
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro, tente novamente pf.");
+            }
+            finally
+            {
+                button1.Enabled = true;
+                txtID.Enabled = true;
+            }
         }
     }
 }
