@@ -49,17 +49,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1/N+chksOiCCm5QaVjqSmDiO5gM=</dsig:DigestValue>
+        <dsig:DigestValue>cCApLwfTTTr1kOy9kAga6Wh/6fk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Server.exe.config" size="2850">
+  <file name="Server.exe.config" size="2837">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>PTNiESQbbs9CkxSCjhRB6lctvXc=</dsig:DigestValue>
+      <dsig:DigestValue>h7hHYtKbYUdqJQPNMNUAfpwiuoc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

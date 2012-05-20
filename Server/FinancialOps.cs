@@ -138,6 +138,7 @@ namespace FinancialOps
                     list.Add(rdr["quantidade"].ToString());
                     list.Add(rdr["cotacao"].ToString());
                     list.Add(rdr["valor"].ToString());
+                    list.Add(rdr["estado"].ToString());
                     requests.Add(list);
                 }
             }

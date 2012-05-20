@@ -1,13 +1,3 @@
-c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe.config
-c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe
-c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.pdb
-c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe
-c:\users\babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.pdb
-C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe.manifest
-C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.application
-C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe.manifest
-C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.application
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\bin\Debug\Server.exe.config
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\obj\x86\Debug\Server.exe
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\obj\x86\Debug\Server.pdb
@@ -18,3 +8,13 @@ D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\bin\Debug\Server.exe
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\bin\Debug\Server.pdb
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\obj\x86\Debug\Server.exe.manifest
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Server\obj\x86\Debug\Server.application
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe.config
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe.manifest
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.application
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.exe
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\bin\Debug\Server.pdb
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe.manifest
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.application
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.exe
+C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Server\obj\x86\Debug\Server.pdb

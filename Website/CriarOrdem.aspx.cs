@@ -23,20 +23,21 @@ public partial class CriarOrdem : System.Web.UI.Page
             Boolean op = server.NewOrder(Convert.ToInt32(TextBox1.Text), TextBox2.Text, RadioButtonList1.SelectedIndex,                                                             RadioButtonList2.SelectedIndex, Convert.ToInt32(TextBox3.Text));
             if (op)
             {
-                string script = "<script type=text/javascript>alert('YEY!')</script>";
+                string script = "<script type=text/javascript>alert('Ordem Criada com sucesso!')</script>";
                 if (!this.ClientScript.IsStartupScriptRegistered("script"))
                     this.ClientScript.RegisterStartupScript(this.GetType(), "script", script);
+                Server.Transfer("Default.aspx");
             }
             else
             {
-                string script = "<script type=text/javascript>alert('OOOOOO!')</script>";
+                string script = "<script type=text/javascript>alert('Ocorreu um erro, tente novamente!')</script>";
                 if (!this.ClientScript.IsStartupScriptRegistered("script"))
                     this.ClientScript.RegisterStartupScript(this.GetType(), "script", script);
             }
         }
         catch
         {
-            string script = "<script type=text/javascript> alert('Um dos campos está mal! DUMBASS!!')</script>";
+            string script = "<script type=text/javascript> alert('Um dos campos está incorreto!')</script>";
             if (!this.ClientScript.IsStartupScriptRegistered("script"))
                 this.ClientScript.RegisterStartupScript(this.GetType(), "script", script);
         }

@@ -33,6 +33,19 @@ namespace Desk
                     return;
                 do
                 {
+                    if (requests[i][2] == "0")
+                        requests[i][2] = "Compra";
+                    else
+                        requests[i][2] = "Venda";
+                    if(requests[i][5] == "-1,0000")
+                        requests[i][5] = "-";
+                    if (requests[i][6] == "-1,0000")
+                        requests[i][6] = "-";
+                    if (requests[i][7] == "0")
+                        requests[i][7] = "Por executar";
+                    else
+                        requests[i][7] = "Executado";
+
                     ListViewItem lv = new ListViewItem(requests[i]);
                     listView1.Items.Add(lv);
                     i++;
@@ -48,6 +61,11 @@ namespace Desk
                 button1.Enabled = true;
                 txtID.Enabled = true;
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

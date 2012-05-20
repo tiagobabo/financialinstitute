@@ -31,7 +31,7 @@ namespace Desk
                     MessageBox.Show("Erro ao adicionar ao ordem no servidor.");
                 this.Close();
             }
-            catch(Exception ex)
+            catch
             {
                 MessageBox.Show("Ocorreu um erro ao inserir a ordem. Verifique os campos e tente novamente.");
             }
