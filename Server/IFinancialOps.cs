@@ -19,9 +19,6 @@ namespace FinancialOps
         Boolean ChangeOrder(int id, double cotation);
 
         [OperationContract]
-        List<int> GetWaitingRequests();
-
-        [OperationContract]
         List<List<String>> GetRequestsByClient(int client);
 
     }

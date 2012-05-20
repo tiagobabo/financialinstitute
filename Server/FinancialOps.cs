@@ -29,7 +29,12 @@ namespace FinancialOps
                 rows = cmd.ExecuteNonQuery();
                 if (rows == 1)
                 {
-                    financialinstitute.ReportToInstitute(client, email, op, type, quantity);
+                    string newsql = "SELECT MAX(ID) FROM requests";
+
+                    cmd = new SqlCommand(newsql, conn);
+                    int id = Convert.ToInt16(cmd.ExecuteScalar());
+
+                    financialinstitute.ReportToInstitute(DateTime.Now.ToString(), client, email, op, type, quantity, id);
                 }
                 else throw new Exception();
             }
@@ -74,12 +79,10 @@ namespace FinancialOps
             try
             {
                 conn.Open();
-                string sqlcmd = "update requests set op = 1, data=getdate(), cotacao=" + cotation +
-                           "where id=" + id;
+                string sqlcmd = "update requests set estado = 1, data=getdate(), cotacao=" + cotation + ", valor=quantidade*" + cotation +
+                           " where id=" + id;
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
-                if (rows == 1)
-                    OperationContext.Current.SetTransactionComplete();
             }
             catch
             {
@@ -90,31 +93,6 @@ namespace FinancialOps
                 conn.Close();
             }
             return true;
-        }
-
-        public List<int> GetWaitingRequests()
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            List<int> requests = new List<int>();
-            SqlDataReader rdr;
-            try
-            {
-                conn.Open();
-                string sqlcmd = "select id from requests where op=0";
-                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
-                rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                    requests.Add(Convert.ToInt16(rdr["id"]));
-            }
-            catch
-            {
-                return null;
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return requests;
         }
 
         public List<List<String>> GetRequestsByClient(int client)

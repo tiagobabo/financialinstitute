@@ -12,31 +12,42 @@ namespace FinancialInstituteOps
     {
         public static string connString = ConfigurationManager.ConnectionStrings["FinancialInstitute"].ToString();
 
-        public void ReportToInstitute(int client, string email, int op, int type, int quantity)
+        public void ReportToInstitute(String time, int client, string email, int op, int type, int quantity, int id)
         {
             SqlConnection conn = new SqlConnection(connString);
             int rows;
             try
             {
                 conn.Open();
-                string sqlcmd = "insert into requests(cliente, email, op, tipo, quantidade) values("
-                + client + ",'" + email + "'," + op + "," + type + "," + quantity + ");";
+                string sqlcmd = "insert into requests(cliente, email, op, tipo, quantidade, idserver) values("
+                + client + ",'" + email + "'," + op + "," + type + "," + quantity + "," + id + ");";
 
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
                 if (rows != 1)
                     throw new Exception();
             }
-            catch(Exception e)
+            catch
             {
-                FinancialInstitute.Form1.test(e.Message);
+                //TO DO
             }
             finally
             {
                 conn.Close();
             }
 
-            FinancialInstitute.Form1.test("Passei");
+            List<String> list = new List<String>();
+            //list.Add(rdr["data"].ToString());
+            list.Add(time.ToString());
+            list.Add(email);
+            list.Add(""+op);
+            list.Add(""+type);
+            list.Add("" + quantity);
+            list.Add("" + "-1.0");
+            list.Add("" + "-1.0");
+            list.Add("" + "0");
+
+            FinancialInstitute.Program.updateView(list, id);
         }
     }
 }

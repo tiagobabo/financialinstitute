@@ -10,6 +10,6 @@ namespace FinancialInstituteOps
     public interface IFinancialInstituteOps
     {
         [OperationContract(IsOneWay = true)]
-        void ReportToInstitute(int client, string email, int op, int type, int quantity);
+        void ReportToInstitute(string time, int client, string email, int op, int type, int quantity, int id);
     }
 }
