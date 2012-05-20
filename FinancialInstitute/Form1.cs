@@ -117,7 +117,7 @@ namespace FinancialInstitute
         {
             if (cotation.Text != "" && selected_index != -1)
             {
-                Boolean success = server.ChangeOrder(idserver[selected_index], Convert.ToDouble(cotation.Text)/10.0);
+                Boolean success = server.ChangeOrder(idserver[selected_index], Convert.ToDouble(cotation.Text));
                 if (success)
                 {
                     try

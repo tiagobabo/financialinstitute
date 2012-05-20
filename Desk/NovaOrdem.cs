@@ -17,6 +17,8 @@ namespace Desk
         {
             this.server = new FinancialOpsClient();
             InitializeComponent();
+            cbOp.SelectedIndex = 0;
+            cbTipo.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
