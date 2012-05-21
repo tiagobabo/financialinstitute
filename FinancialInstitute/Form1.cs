@@ -135,7 +135,7 @@ namespace FinancialInstitute
                         Email t = new Email(listView1.SelectedItems[0].SubItems[1].Text, idserver[selected_index].ToString(),cotation.Text);
                         t.DoWork();
                     }
-                    catch(Exception ex)
+                    catch
                     {
                         MessageBox.Show("Tente novamente!");
                     }

@@ -4,17 +4,28 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+<link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.js"></script>
+    <title>Consultar Ordem</title>
 </head>
 <body>
+<div class="container">
+<div class="hero-unit" align="center">
 <h1>Consultar ordens</h1>
+<br />
+<br />
+<br />
     <form id="form1" runat="server">
     <div>
         <asp:Label ID="Label1" runat="server" Text="ID do cliente:"></asp:Label>
+         <br />
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Atualizar" 
+        <br />
+        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Atualizar" 
             onclick="Button1_Click" />
     </div>
     </form>
+    </div>
+    </div>
 </body>
 </html>

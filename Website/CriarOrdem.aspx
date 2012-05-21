@@ -4,35 +4,53 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+<link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.js"></script>
+    <title>Criar Ordem</title>
 </head>
 <body>
+<div class="container">
+<div class="hero-unit" align="center">
 <h1>Criar nova ordem</h1>
-    <form id="form1" runat="server">
-    <div>
-        <asp:Label ID="Label1" runat="server" Text="ID do cliente:"></asp:Label>
+<br />
+<br />
+<br />
+    <form class="form-horizontal" id="form1" runat="server">
+    <fieldset>
+    <div class="control-group">
+        <asp:Label class="control-label" ID="Label1" runat="server" Text="ID do cliente:"></asp:Label>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </br>
-        <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label>
+        <asp:Label class="control-label" ID="Label2" runat="server" Text="Email:"></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         </br>
-         <asp:Label ID="Label4" runat="server" Text="Operação:"></asp:Label>
-        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+         <asp:Label class="control-label" ID="Label4" runat="server" Text="Operação:"></asp:Label>
+
+
+        <asp:RadioButtonList class="radio" ID="RadioButtonList1" runat="server">
             <asp:ListItem>Compra</asp:ListItem>
             <asp:ListItem>Venda</asp:ListItem>
         </asp:RadioButtonList>
+
             </br>
-             <asp:Label ID="Label5" runat="server" Text="Tipo:"></asp:Label>
-        <asp:RadioButtonList ID="RadioButtonList2" runat="server">
+             <asp:Label class="control-label" ID="Label5" runat="server" Text="Tipo:"></asp:Label>
+             
+        <asp:RadioButtonList class="radio" ID="RadioButtonList2" runat="server">
             <asp:ListItem>Tipo 1</asp:ListItem>
             <asp:ListItem>Tipo 2</asp:ListItem>
         </asp:RadioButtonList>
-        <asp:Label ID="Label3" runat="server" Text="Quantidade:"></asp:Label>
+
+
+        <asp:Label class="control-label" ID="Label3" runat="server" Text="Quantidade:"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        
-        <asp:Button ID="Button1" runat="server" Text="Criar" onclick="Button1_Click" />
+        <br />
+<br />
+<br />
+        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Criar" onclick="Button1_Click" />
         
     </div>
+    </fieldset>
     </form>
+</div>
 </body>
 </html>
