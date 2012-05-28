@@ -29,7 +29,7 @@ namespace Desk
 
                 MailAddress dummy = new MailAddress(txtEmail.Text);
 
-                Boolean op = server.NewOrder(Convert.ToInt32(txtID.Text), txtEmail.Text, cbOp.SelectedIndex, cbTipo.SelectedIndex,
+                Boolean op = server.NewOrder(Convert.ToInt32(txtID.Text), txtEmail.Text, cbOp.SelectedIndex, cbTipo.SelectedIndex+1,
                     Convert.ToInt32(txtQuantidade.Text));
                 if (op)
                     MessageBox.Show("Ordem adicionada com sucesso.");

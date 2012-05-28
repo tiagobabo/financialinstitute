@@ -50,7 +50,7 @@ namespace FinancialInstitute
                     list.Add(rdr["data"].ToString());
                     list.Add(rdr["email"].ToString());
                     list.Add(rdr["op"].ToString());
-                    list.Add(rdr["tipo"].ToString());
+                    list.Add("Tipo " + rdr["tipo"].ToString());
                     list.Add(rdr["quantidade"].ToString());
                     list.Add(rdr["cotacao"].ToString());
                     list.Add(rdr["valor"].ToString());
