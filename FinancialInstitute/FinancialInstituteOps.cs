@@ -26,18 +26,13 @@ namespace FinancialInstituteOps
                 rows = cmd.ExecuteNonQuery();
                 if (rows != 1)
                     throw new Exception();
-            }
-            catch
-            {
-                //TO DO
-            }
+            } 
             finally
             {
                 conn.Close();
             }
 
             List<String> list = new List<String>();
-            //list.Add(rdr["data"].ToString());
             list.Add(time.ToString());
             list.Add(email);
             list.Add(""+op);

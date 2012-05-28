@@ -90,6 +90,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Service References\FinancialInstitute\FinancialInstituteOps.wsdl" />
     <None Include="Service References\FinancialInstitute\item.xsd">
       <SubType>Designer</SubType>

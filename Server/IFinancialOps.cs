@@ -16,7 +16,7 @@ namespace FinancialOps
         int GetStatus(int id);
 
         [OperationContract]
-        Boolean ChangeOrder(int id, double cotation);
+        Boolean ChangeOrder(int id, double cotation, string email);
 
         [OperationContract]
         List<List<String>> GetRequestsByClient(int client);
