@@ -8,13 +8,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="TcpFinancialBinding_ChangeOrder_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <oletx:OleTxAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:oletx="http://schemas.microsoft.com/ws/2006/02/tx/oletx" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:9002/FinancialInstitution/?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -40,12 +33,6 @@
   <wsdl:message name="IFinancialOps_ChangeOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:ChangeOrderResponse" />
   </wsdl:message>
-  <wsdl:message name="IFinancialOps_GetWaitingRequests_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetWaitingRequests" />
-  </wsdl:message>
-  <wsdl:message name="IFinancialOps_GetWaitingRequests_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetWaitingRequestsResponse" />
-  </wsdl:message>
   <wsdl:message name="IFinancialOps_GetRequestsByClient_InputMessage">
     <wsdl:part name="parameters" element="tns:GetRequestsByClient" />
   </wsdl:message>
@@ -64,10 +51,6 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ChangeOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/ChangeOrder" message="tns:IFinancialOps_ChangeOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/ChangeOrderResponse" message="tns:IFinancialOps_ChangeOrder_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetWaitingRequests">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/GetWaitingRequests" message="tns:IFinancialOps_GetWaitingRequests_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFinancialOps/GetWaitingRequestsResponse" message="tns:IFinancialOps_GetWaitingRequests_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetRequestsByClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IFinancialOps/GetRequestsByClient" message="tns:IFinancialOps_GetRequestsByClient_InputMessage" />
@@ -96,17 +79,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ChangeOrder">
-      <wsp:PolicyReference URI="#TcpFinancialBinding_ChangeOrder_policy" />
       <soap12:operation soapAction="http://tempuri.org/IFinancialOps/ChangeOrder" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetWaitingRequests">
-      <soap12:operation soapAction="http://tempuri.org/IFinancialOps/GetWaitingRequests" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -1,6 +1,6 @@
 ﻿namespace FinancialInstitute
 {
-    partial class Form1
+    partial class FinancialInstituteForm
     {
         /// <summary>
         /// Required designer variable.

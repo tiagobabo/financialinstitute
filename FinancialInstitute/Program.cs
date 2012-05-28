@@ -8,7 +8,7 @@ namespace FinancialInstitute
     static class Program
     {
 
-        public static Form1 f;
+        public static FinancialInstituteForm f;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,7 +17,7 @@ namespace FinancialInstitute
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            f = new Form1();
+            f = new FinancialInstituteForm();
             Application.Run(f);
         }
 

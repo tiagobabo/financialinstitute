@@ -6,16 +6,54 @@ using System.ServiceModel;
 using System.Data.SqlClient;
 using System.Configuration;
 using Server.FinancialInstitute;
+using System.Threading;
+using System.Net.Mail;
 
 namespace FinancialOps
 {
+    public class Email
+    {
+
+        string email;
+        string id;
+        string cotacao;
+
+        public Email(string email, string id, string cotacao)
+        {
+            this.email = email;
+            this.id = id;
+            this.cotacao = cotacao;
+        }
+
+        public void DoWork()
+        {
+            Thread t = new Thread(new ThreadStart(DoWorkCore));
+            t.Start();
+        }
+
+        private void DoWorkCore()
+        {
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress("financialinstitutetdin@gmail.com");
+            message.To.Add(new MailAddress(email));
+
+            message.Subject = "Financial Institute";
+            message.Body = "O pedido com o id " + id + " foi executado com a cotação: ";
+            message.Body += cotacao + ".";
+
+            SmtpClient client = new SmtpClient();
+            client.EnableSsl = true;
+            client.Send(message);
+        }
+    }
+
     class FinancialOps : IFinancialOps
     {
         public static string connString = ConfigurationManager.ConnectionStrings["FinancialServer"].ToString();
         public FinancialInstituteOpsClient financialinstitute = new FinancialInstituteOpsClient();
 
-   
-        public Boolean NewOrder(int client, string email, int op, int type, int quantity) 
+
+        public Boolean NewOrder(int client, string email, int op, int type, int quantity)
         {
             SqlConnection conn = new SqlConnection(connString);
             int rows;
@@ -72,7 +110,7 @@ namespace FinancialOps
             return status;
         }
 
-        public Boolean ChangeOrder(int id, double cotation)
+        public Boolean ChangeOrder(int id, double cotation, String email)
         {
             SqlConnection conn = new SqlConnection(connString);
             int rows;
@@ -83,6 +121,9 @@ namespace FinancialOps
                            " where id=" + id;
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
+
+                Email t = new Email(email, id + "", cotation + "");
+                t.DoWork();
             }
             catch
             {
@@ -103,7 +144,7 @@ namespace FinancialOps
             try
             {
                 conn.Open();
-                string sqlcmd = "select * from requests where cliente="+client;
+                string sqlcmd = "select * from requests where cliente=" + client;
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())

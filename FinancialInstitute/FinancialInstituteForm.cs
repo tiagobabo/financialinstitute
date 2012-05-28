@@ -15,7 +15,7 @@ using System.Threading;
 
 namespace FinancialInstitute
 {
-    public partial class Form1 : Form
+    public partial class FinancialInstituteForm : Form
     {
 
         ServiceHost host;
@@ -23,7 +23,7 @@ namespace FinancialInstitute
         public List<int> idserver;
         int selected_index = -1;
         
-        public Form1()
+        public FinancialInstituteForm()
         {
             InitializeComponent();
 
@@ -119,7 +119,7 @@ namespace FinancialInstitute
         {
             if (cotation.Text != "" && selected_index != -1)
             {
-                Boolean success = server.ChangeOrder(idserver[selected_index], Convert.ToDouble(cotation.Text));
+                Boolean success = server.ChangeOrder(idserver[selected_index], Convert.ToDouble(cotation.Text), listView1.SelectedItems[0].SubItems[1].Text);
                 if (success)
                 {
                     try

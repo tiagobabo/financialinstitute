@@ -2,7 +2,6 @@ C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Financi
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\bin\Debug\FinancialInstitute.exe
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\bin\Debug\FinancialInstitute.pdb
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\FinancialInstitute.Form1.resources
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\FinancialInstitute.Properties.Resources.resources
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\GenerateResource.write.1.tlog
@@ -18,3 +17,4 @@ D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\FinancialInstitute\obj\x86\Debug
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\FinancialInstitute\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\FinancialInstitute\obj\x86\Debug\FinancialInstitute.exe
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\FinancialInstitute\obj\x86\Debug\FinancialInstitute.pdb
+C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\FinancialInstitute\obj\x86\Debug\FinancialInstitute.FinancialInstituteForm.resources

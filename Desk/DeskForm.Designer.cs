@@ -1,6 +1,6 @@
 ﻿namespace Desk
 {
-    partial class Form1
+    partial class DeskForm
     {
         /// <summary>
         /// Required designer variable.

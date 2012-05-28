@@ -10,10 +10,10 @@ using Desk.Server;
 
 namespace Desk
 {
-    public partial class Form1 : Form
+    public partial class DeskForm : Form
     {
         FinancialOpsClient server;
-        public Form1()
+        public DeskForm()
         {
             InitializeComponent();
             server = new FinancialOpsClient();

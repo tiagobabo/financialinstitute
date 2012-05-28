@@ -3,7 +3,6 @@ C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\bi
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\bin\Debug\Desk.pdb
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\Desk.ConsultarEstado.resources
-C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\Desk.Form1.resources
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\Desk.NovaOrdem.resources
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\Desk.Properties.Resources.resources
 C:\Users\Babo\documents\visual studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\GenerateResource.read.1.tlog
@@ -22,3 +21,4 @@ D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Desk\obj\x86\Debug\GenerateResou
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Desk\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Desk\obj\x86\Debug\Desk.exe
 D:\FEUP - MIEIC\4º Ano\TDIN\financialinstitute\Desk\obj\x86\Debug\Desk.pdb
+C:\Users\Babo\Documents\Visual Studio 2010\Projects\FinancialInstitution\Desk\obj\x86\Debug\Desk.DeskForm.resources
