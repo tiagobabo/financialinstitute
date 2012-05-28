@@ -132,8 +132,7 @@ namespace FinancialInstitute
                         SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                         cmd.ExecuteNonQuery();
                         
-                        Email t = new Email(listView1.SelectedItems[0].SubItems[1].Text, idserver[selected_index].ToString(),cotation.Text);
-                        t.DoWork();
+             
                     }
                     catch
                     {
@@ -157,41 +156,5 @@ namespace FinancialInstitute
         }
 
 
-    }
-
-    public class Email
-    {
-
-        string email;
-        string id;
-        string cotacao;
-
-        public Email(string email, string id, string cotacao)
-        {
-            this.email = email;
-            this.id = id;
-            this.cotacao = cotacao;
-        }
-
-        public void DoWork()
-        {
-            Thread t = new Thread(new ThreadStart(DoWorkCore));
-            t.Start();
-        }
-
-        private void DoWorkCore()
-        {
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress("financialinstitutetdin@gmail.com");
-            message.To.Add(new MailAddress(email));
-
-            message.Subject = "Financial Institute";
-            message.Body = "O pedido com o id " + id + " foi executado com a cotação: ";
-            message.Body += cotacao + ".";
-
-            SmtpClient client = new SmtpClient();
-            client.EnableSsl = true;
-            client.Send(message);
-        }
     }
 }
