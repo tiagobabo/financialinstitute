@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Desk.Server;
+using System.Net.Mail;
 
 namespace Desk
 {
@@ -25,6 +26,9 @@ namespace Desk
         {
             try
             {
+
+                MailAddress dummy = new MailAddress(txtEmail.Text);
+
                 Boolean op = server.NewOrder(Convert.ToInt32(txtID.Text), txtEmail.Text, cbOp.SelectedIndex, cbTipo.SelectedIndex,
                     Convert.ToInt32(txtQuantidade.Text));
                 if (op)

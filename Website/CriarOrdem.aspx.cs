@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Server;
+using System.Net.Mail;
 
 public partial class CriarOrdem : System.Web.UI.Page
 {
@@ -20,6 +21,8 @@ public partial class CriarOrdem : System.Web.UI.Page
         FinancialOpsClient server = new FinancialOpsClient();
         try
         {
+            MailAddress dummy = new MailAddress(TextBox2.Text);
+
             Boolean op = server.NewOrder(Convert.ToInt32(TextBox1.Text), TextBox2.Text, RadioButtonList1.SelectedIndex,                                                             RadioButtonList2.SelectedIndex, Convert.ToInt32(TextBox3.Text));
             if (op)
             {
