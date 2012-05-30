@@ -23,7 +23,7 @@ public partial class CriarOrdem : System.Web.UI.Page
         {
             MailAddress dummy = new MailAddress(TextBox2.Text);
 
-            Boolean op = server.NewOrder(Convert.ToInt32(TextBox1.Text), TextBox2.Text, RadioButtonList1.SelectedIndex,                                                             RadioButtonList2.SelectedIndex, Convert.ToInt32(TextBox3.Text));
+            Boolean op = server.NewOrder(Convert.ToInt32(TextBox1.Text), TextBox2.Text, RadioButtonList1.SelectedIndex,                                                             RadioButtonList2.SelectedIndex+1, Convert.ToInt32(TextBox3.Text));
             if (op)
             {
                 string script = "<script type=text/javascript>alert('Ordem Criada com sucesso!')</script>";

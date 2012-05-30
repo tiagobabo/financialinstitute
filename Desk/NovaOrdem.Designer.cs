@@ -123,8 +123,8 @@
             // 
             this.cbTipo.FormattingEnabled = true;
             this.cbTipo.Items.AddRange(new object[] {
-            "Tipo 1 ",
-            "Tipo 2"});
+            "Ordinária",
+            "Preferencial"});
             this.cbTipo.Location = new System.Drawing.Point(98, 109);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(121, 21);

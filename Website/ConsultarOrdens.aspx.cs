@@ -34,6 +34,13 @@ public partial class ConsultarOrdens : System.Web.UI.Page
                         else
                             Page.Controls.Add(new LiteralControl("<td>" + "Venda" + "</td>"));
                     }
+                    else if (j == 3)
+                    {
+                        if (requests[i][j] == "1")
+                            Page.Controls.Add(new LiteralControl("<td>" + "Ordinária" + "</td>"));
+                        else
+                            Page.Controls.Add(new LiteralControl("<td>" + "Preferencial" + "</td>"));
+                    }
                     else if (j == 5 || j == 6)
                     {
                         if (requests[i][j] == "-1,0000")

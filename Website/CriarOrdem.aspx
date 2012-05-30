@@ -36,8 +36,8 @@
              <asp:Label class="control-label" ID="Label5" runat="server" Text="Tipo:"></asp:Label>
              
         <asp:RadioButtonList class="radio" ID="RadioButtonList2" runat="server">
-            <asp:ListItem>Tipo 1</asp:ListItem>
-            <asp:ListItem>Tipo 2</asp:ListItem>
+            <asp:ListItem>Ordinária</asp:ListItem>
+            <asp:ListItem>Preferencial</asp:ListItem>
         </asp:RadioButtonList>
 
 

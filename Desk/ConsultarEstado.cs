@@ -37,6 +37,10 @@ namespace Desk
                         requests[i][2] = "Compra";
                     else
                         requests[i][2] = "Venda";
+                    if (requests[i][3] == "1")
+                        requests[i][3] = "Ordinária";
+                    else
+                        requests[i][3] = "Preferencial";
                     if(requests[i][5] == "-1,0000")
                         requests[i][5] = "-";
                     if (requests[i][6] == "-1,0000")

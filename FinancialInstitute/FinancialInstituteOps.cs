@@ -41,7 +41,10 @@ namespace FinancialInstituteOps
             list.Add(time.ToString());
             list.Add(email);
             list.Add(""+op);
-            list.Add("Tipo "+type);
+            if (type == 1)
+                list.Add("Ordinária");
+            else
+                list.Add("Preferencial");
             list.Add("" + quantity);
             list.Add("" + "-1.0");
             list.Add("" + "-1.0");

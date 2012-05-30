@@ -50,7 +50,7 @@ namespace FinancialInstitute
                     list.Add(rdr["data"].ToString());
                     list.Add(rdr["email"].ToString());
                     list.Add(rdr["op"].ToString());
-                    list.Add("Tipo " + rdr["tipo"].ToString());
+                    list.Add(rdr["tipo"].ToString());
                     list.Add(rdr["quantidade"].ToString());
                     list.Add(rdr["cotacao"].ToString());
                     list.Add(rdr["valor"].ToString());
@@ -74,6 +74,10 @@ namespace FinancialInstitute
                     requests[i][2] = "Compra";
                 else
                     requests[i][2] = "Venda";
+                if (requests[i][3] == "1")
+                    requests[i][3] = "Ordinária";
+                else
+                    requests[i][3] = "Preferencial";
                 if (requests[i][5] == "-1,0000")
                     requests[i][5] = "-";
                 if (requests[i][6] == "-1,0000")
